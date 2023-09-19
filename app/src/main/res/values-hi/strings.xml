@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <string name="app_name" >Mobile Tracker</string>
+    <string name="app_logo" >रास्ता</string>
+    <string name="shortcut_start" >सेवा शुरू करें</string>
+    <string name="shortcut_stop" >सेवा रोकें</string>
+    <string name="shortcut_sos" >एसओएस भेजें</string>
+    <string name="channel_default" >प्राथमिक चैनल</string>
+    <string name="settings_id_title" >डिवाइस पहचानकर्ता</string>
+    <string name="settings_url_title" >सर्वर यूआरएल</string>
+    <string name="settings_url_summary" >ट्रैकिंग सर्वर यूआरएल</string>
+    <string name="settings_interval_title" >आवृत्ति</string>
+    <string name="settings_interval_summary" >सेकंड में रिपोर्टिंग अंतराल</string>
+    <string name="settings_distance_title" >दूरी</string>
+    <string name="settings_distance_summary" >रिपोर्टिंग दूरी मीटर में</string>
+    <string name="settings_angle_title" >कोण</string>
+    <string name="settings_angle_summary" >डिग्री में रिपोर्टिंग कोण</string>
+    <string name="settings_status_title" >सेवा की स्थिति</string>
+    <string name="settings_status_off" >शुरू</string>
+    <string name="settings_status_on" >रुकना</string>
+    <string name="settings_status_off_summary" >सेवा बंद हो गई</string>
+    <string name="settings_status_on_summary" >सेवा चल रही है</string>
+    <string name="settings_buffer" >ऑफ़लाइन बफ़रिंग</string>
+    <string name="settings_buffer_off_summary" >बफ़रिंग बंद करना</string>
+    <string name="settings_buffer_on_summary" >बफ़रिंग चालू</string>
+    <string name="settings_wakelock" >जागा ताला</string>
+    <string name="settings_wakelock_off_summary" >जागो ताला बंद करो</string>
+    <string name="settings_wakelock_on_summary" >जागो ताला चालू करो</string>
+    <string name="settings_accuracy_title" >स्थान सटीकता</string>
+    <string name="settings_accuracy_summary" >वांछित स्थान सटीकता</string>
+    <string name="settings_accuracy_high" >उच्च</string>
+    <string name="settings_accuracy_medium" >मध्यम</string>
+    <string name="settings_accuracy_low" >कम</string>
+    <string name="settings_foreground_title" >अग्रभूमि सेवा</string>
+    <string name="settings_foreground_summary" >सेवा प्राथमिकता बढ़ाएँ</string>
+    <string name="menu_status" >दर्जा</string>
+    <string name="menu_info" >जानकारी</string>
+    <string name="menu_shortcuts" >शॉर्टकट जोड़ें</string>
+    <string name="menu_clear" >साफ़</string>
+    <string name="status_service_create" >सेवा प्रारंभ हुई</string>
+    <string name="status_service_destroy" >सेवा बंद हो गई</string>
+    <string name="status_send_success" >सफलतापूर्वक भेजें</string>
+    <string name="status_send_fail" >भेजना विफल</string>
+    <string name="status_location_update" >स्थान अद्यतन</string>
+    <string name="status_network_online" >नेटवर्क ऑनलाइन</string>
+    <string name="status_network_offline" >नेटवर्क ऑफ़लाइन</string>
+    <string name="hidden_app_name" >Device Settings</string>
+    <string name="hidden_alert" >ऐप छिपा दिया गया है. इसे दोबारा खोलने के लिए कृपया 8722227 (TRACCAR) डायल करें।</string>
+    <string name="error_msg_invalid_url" >कृपया एक वैध http:// या https:// URL दर्ज करें</string>
+    <string name="request_exception" >लगातार स्थान डेटा एकत्र करने के लिए कृपया ऐप के लिए बैटरी अनुकूलन बंद करें।</string>
+    <string name="request_background" >स्थान डेटा को लगातार एकत्रित करने के लिए कृपया \"%s\" अनुमति सक्षम करें।</string>
+    <string name="request_background_option" >हर समय अनुमति दें</string>
+    <string name="tnc" >Terms and Conditions - Android Mobile Tracking App
+
+These terms and conditions ("Agreement") govern your use of the Android mobile tracking app ("App") provided by FREIGHTKING INDIA LIMITED ("Provider"), a company based in Mumbai, India. By installing and using the App, you agree to be bound by this Agreement. If you do not agree with any part of these terms and conditions, please refrain from using the App.
+
+1. App Functionality The App allows you to track the location and collect data from the Android devices on which it is installed. The data collected may include GPS coordinates, device information, and other relevant data necessary for providing the tracking functionality.
+
+2. Data Collection and Usage The App collects and transmits data from the user\'s Android device to our secure server. This data includes the information provided by the user in the form within the App, such as driver name, driver mobile number, transport company name, consignment/courier details, parcel number, etc. We will handle the collected data in accordance with our privacy policy, which you can review [link to privacy policy].
+
+3. User Consent By installing and using the App, you confirm that you have obtained the necessary consent from the device user to track their location and collect the provided data. It is your responsibility to ensure compliance with applicable laws and regulations regarding data privacy and obtaining user consent.
+
+4. Data Security We take data security seriously and employ industry-standard measures to protect the data transmitted from the App to our server. However, please note that no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee the absolute security of your data but will make reasonable efforts to protect it.
+
+5. Third-Party Services The App may integrate with third-party services, such as mapping services or analytics tools, to enhance its functionality. These third-party services may have their own terms and privacy policies, and your use of such services is subject to those terms and policies. We are not responsible for the actions or practices of these third-party services.
+
+6. User Obligations You agree to use the App in compliance with all applicable laws, regulations, and this Agreement. You shall ensure that the information provided in the form is accurate and up to date. You shall not use the App for any illegal, unauthorized, or malicious purposes. You are solely responsible for the use and interpretation of the data collected through the App.
+
+7. Disclaimer of Liability FREIGHTKING INDIA LIMITED shall not be liable for any damages, losses, or liabilities arising out of or in connection with the use of the App or the data collected. FREIGHTKING INDIA LIMITED disclaims any warranties, express or implied, regarding the accuracy, reliability, or suitability of the App for any particular purpose.
+
+8. Termination FREIGHTKING INDIA LIMITED reserves the right to terminate your access to the App at any time for any reason, without prior notice. Upon termination, you shall cease all use of the App and delete it from any devices under your control.
+
+9. Updates and Modifications FREIGHTKING INDIA LIMITED may release updates or new versions of the App from time to time, which may include bug fixes, feature enhancements, or changes to the functionality. You agree to install and use the latest version of the App to ensure optimal performance and security.
+
+10. Governing Law and Jurisdiction This Agreement shall be governed by and construed in accordance with the laws of India. Any legal action or proceeding arising out of or in connection with this Agreement shall be brought in the courts of Mumbai, Maharashtra, India.
+
+11. Entire Agreement This Agreement constitutes the entire understanding between you and FREIGHTKING INDIA LIMITED concerning the subject matter herein and supersedes all prior agreements and understandings, whether written or oral.
+
+By installing and using the App, you acknowledge that you have read, understood, and agreed to the terms and conditions set forth in this Agreement. If you have any questions or concerns regarding this Agreement, please contact us at Info@freightking.in.
+
+FREIGHTKING INDIA LIMITED
+
+Mumbai, Maharashtra, India</string>
+    <string name="driver_mobile">ड्राइवर मोबाइल</string>
+    <string name="driver_name">चालक का नाम</string>
+    <string name="dlr_number">एलआर नंबर</string>
+    <string name="company_name">कंपनी का नाम</string>
+    <string name="starting_point">स्टारटिंग पॉईंट</string>
+    <string name="destination_point">डेस्टिनाशन पॉईंट</string>
+    <string name="unique_number">एकमात्र संख्या</string>
+    <string name="vehic77le_number">गाडी नंबर</string>
+    <string name="terms_amp_conditions">शर्तें एवं शर्तें स्थितियाँ</string>
+    <string name="i_accept">मुझे स्वीकार है</string>
+    <string name="status">स्टेटस</string>
+
+    <string name="stop_trip">स्टॉप</string>
+    <string name="start_trip">स्टार्ट</string>
+    <string name="please_allow_location_permission_to_access_your_current_location">Please allow location permission to access your current location</string>
+
+</resources>

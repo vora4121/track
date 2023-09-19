@@ -1,0 +1,127 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.dagger.hilt.android'
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId 'org.ecmtracker.client'
+        buildConfigField 'boolean', 'HIDDEN_APP', 'false'
+        minSdkVersion 17
+        targetSdkVersion 33
+        versionCode 81
+        versionName '7.0'
+        resourceConfigurations += ["en", "hi"]
+        multiDexEnabled true
+    }
+    namespace 'org.ecmtracker.client'
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES']
+        }
+    }
+
+    flavorDimensions 'default'
+    productFlavors {
+        regular {
+            isDefault = true
+        }
+        google
+        hidden {
+            applicationId 'org.ecmtracker.client.hidden'
+            buildConfigField 'boolean', 'HIDDEN_APP', 'true'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+    lint {
+        checkReleaseBuilds false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4G"
+    }
+
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.9.0' // wait for preference-ktx update
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.preference:preference-ktx:1.2.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.github.judemanutd:autostarter:1.1.0'
+    implementation('dev.doubledot.doki:library:0.0.1@aar') {
+        transitive = true
+    }
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.7.3'
+    googleImplementation platform('com.google.firebase:firebase-bom:28.2.1')
+    googleImplementation 'com.google.firebase:firebase-core'
+    googleImplementation 'com.google.firebase:firebase-analytics'
+    googleImplementation 'com.google.firebase:firebase-crashlytics'
+    googleImplementation 'com.google.android.gms:play-services-location:21.0.1'
+    googleImplementation 'com.google.android.play:core:1.10.3'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
+    // RETROFIT
+    def retrofit_version = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+
+    // LIFE_CYCLE
+    def lifecycle_version = "2.5.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+
+    //Kotlin Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+    // HILT
+    implementation "com.google.dagger:hilt-android:2.44.2"
+    kapt "com.google.dagger:hilt-compiler:2.44.2"
+
+    //Navigation
+    def nav_version = "2.5.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
+    //CIRCULAR IMAGE
+    implementation 'com.mikhaellopez:circularimageview:4.3.1'
+
+    implementation 'com.karumi:dexter:6.2.3'
+
+
+}
+
+if (getGradle().getStartParameter().getTaskRequests().toString().contains('Google')) {
+    apply plugin: 'com.google.gms.google-services'
+    apply plugin: 'com.google.firebase.crashlytics'
+
+    task copyJson(type: Copy) {
+        from '../../environment/google-services'
+        into '.'
+        include 'ecmtracker-client-android.json'
+        rename('ecmtracker-client-android.json', 'google-services.json')
+    }
+
+    afterEvaluate {
+        preBuild.dependsOn copyJson
+    }
+}
